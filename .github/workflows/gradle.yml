@@ -44,7 +44,7 @@ jobs:
 
     - name: Gradle Wrapper로 빌드
       run: |
-        cd ./portfolio/back
+        cd ./portfolio/back/back
         ./gradlew clean build --exclude-task test
     - name: Build with Gradle Wrapper
       run: |
