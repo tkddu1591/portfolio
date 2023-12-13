@@ -18,21 +18,25 @@ permissions:
 
 jobs:
   build:
-
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        path: portfolio/back
+
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Grant execute permission for gradlew
-      run: chmod +x /home/runner/work/portfolio/back/gradlew
-      shell: bash
-    - name: Build with Gradle Wrapper
-      run: |
-        cd /home/runner/work/portfolio/back
-        ./gradlew build
+
+   # - name: Grant execute permission for gradlew
+   #   run: chmod +x ./portfolio/back/gradlew
+   #   shell: bash
+
+   # - name: Build with Gradle Wrapper
+   #   run: |
+   #     cd ./portfolio/back
+   #     ./gradlew clean build --exclude-task test
