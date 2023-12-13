@@ -13,9 +13,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-permissions:
-  contents: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,7 +21,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        path: portfolio/back  # 프로젝트가 위치한 경로로 수정하세요
+        path: portfolio/back
 
     - name: Set up JDK 17
       uses: actions/setup-java@v3
@@ -32,6 +29,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
+    - name: Build with Gradle
+      run: |
+        cd portfolio/back
+        ./gradlew build
     - name: Build with Gradle
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
