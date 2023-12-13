@@ -29,12 +29,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name : find
-      run: ll
-    #- name: Grant execute permission for gradlew
-    #  run: chmod +x ./back/gradlew
-    #  shell: bash
-    #- name: Build with Gradle Wrapper
-    #  run: |
-    #    cd /back
-    #    ./gradlew build
+    - name: Grant execute permission for gradlew
+      run: chmod +x /home/runner/work/portfolio/back/gradlew
+      shell: bash
+    - name: Build with Gradle Wrapper
+      run: |
+        cd /home/runner/work/portfolio/back
+        ./gradlew build
