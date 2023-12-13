@@ -31,5 +31,5 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       run: |
-        cd ./back
+        cd portfolio/back
         ./gradlew build
