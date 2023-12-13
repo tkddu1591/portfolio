@@ -32,11 +32,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-   # - name: Grant execute permission for gradlew
-   #   run: chmod +x ./portfolio/back/gradlew
-   #   shell: bash
+    - name: Grant execute permission for gradlew
+      run: chmod +x ./portfolio/back/gradlew
+      shell: bash
 
-   # - name: Build with Gradle Wrapper
-   #   run: |
-   #     cd ./portfolio/back
-   #     ./gradlew clean build --exclude-task test
+    - name: Build with Gradle Wrapper
+      run: |
+        cd ./portfolio/back
+        ./gradlew clean build --exclude-task test
