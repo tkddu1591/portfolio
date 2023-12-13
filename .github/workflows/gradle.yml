@@ -44,3 +44,4 @@ jobs:
       run: |
         cd ./portfolio/back/back
         ./gradlew clean build --exclude-task test
+#
