@@ -7,10 +7,10 @@
 
 name: Java CI with Gradle
 
-on:
-  push:
-    paths:
-      - 'back/**'  # back 디렉토리 내부의 변경에만 반응
+#on:
+#  push:
+#    paths:
+#      - 'back/**'  # back 디렉토리 내부의 변경에만 반응
 
 jobs:
   build:
