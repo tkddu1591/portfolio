@@ -24,15 +24,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
       with:
-        java-version: '17'
-        distribution: 'temurin'
-
-    - name: Display directory contents
-      run: ls -R ./back
+        path: ./back  # 프로젝트를 저장할 경로 지정
 
     - name: Set up JDK 17
       uses: actions/setup-java@v3
