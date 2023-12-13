@@ -38,5 +38,5 @@ jobs:
       run: ls -R ./back
 
     - name: Build with Gradle Wrapper
-      run: ./back/gradlew clean build --exclude-task test
+      run: ./gradlew clean build --exclude-task test
       working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
