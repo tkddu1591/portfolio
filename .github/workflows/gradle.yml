@@ -31,7 +31,7 @@ jobs:
       run: ls -R ./back
 
     - name: Grant execute permission for gradlew
-      run: chmod +x ./back/gradlew
+      run: chmod +x ./gradlew
       working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
 
     - name: Display directory contents after permission granted
