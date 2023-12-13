@@ -37,7 +37,7 @@ jobs:
 
     - name: gradlew에 실행 권한 부여
       run: chmod +x ./portfolio/back/back/gradlew
-      working-directory: portfolio/back  # 명령을 실행할 디렉토리 지정
+      working-directory: portfolio/back/back # 명령을 실행할 디렉토리 지정
 
     - name: 권한 부여 후 디렉토리 내용 표시
       run: ls -R ./portfolio/back/back
