@@ -34,5 +34,5 @@ jobs:
       shell: bash
     - name: Build with Gradle Wrapper
       run: |
-        cd ./back
+        cd /back
         ./gradlew build
