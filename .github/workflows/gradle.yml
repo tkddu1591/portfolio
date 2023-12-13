@@ -36,11 +36,11 @@ jobs:
       run: ls -R ./portfolio/back
 
     - name: gradlew에 실행 권한 부여
-      run: chmod +x ./portfolio/back/gradlew
+      run: chmod +x ./portfolio/back/back/gradlew
       working-directory: portfolio/back  # 명령을 실행할 디렉토리 지정
 
     - name: 권한 부여 후 디렉토리 내용 표시
-      run: ls -R ./portfolio/back
+      run: ls -R ./portfolio/back/back
 
     - name: Gradle Wrapper로 빌드
       run: |
@@ -48,5 +48,5 @@ jobs:
         ./gradlew clean build --exclude-task test
     - name: Build with Gradle Wrapper
       run: |
-        cd ./portfolio/back
+        cd ./portfolio/back/back
         ./gradlew clean build --exclude-task test
