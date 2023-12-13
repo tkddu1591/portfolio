@@ -24,7 +24,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
       with:
-        path: back  # 이 부분을 프로젝트 경로로 수정하세요
+        path: /back  # 이 부분을 프로젝트 경로로 수정하세요
 
     - name: Set up JDK 17
       uses: actions/setup-java@v3
@@ -37,4 +37,4 @@ jobs:
       with:
         gradle-wrapper: true
         arguments: build
-        working-directory: back  # Gradle 작업이 수행될 디렉터리를 지정합니다
+        working-directory: /back  # Gradle 작업이 수행될 디렉터리를 지정합니다
