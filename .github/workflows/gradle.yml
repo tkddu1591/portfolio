@@ -9,13 +9,13 @@ on:
     branches: [ "master" ]
 
 # 해당 yml 내에서 사용할 key-value 속성
-env:  
+env:
   PROJECT_NAME: portfolio
   AWS_REGION: ap-northeast-2
   S3_BUCKET_NAME: tkddu1591-s3-bucket-github-actions
   CODE_DEPLOY_APPLICATION_NAME: tkddu1591-codedeploy-app
   CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: tkddu1591-codedeploy-deploy-group
-  
+
 # workflow는 한개 이상의 job을 가지며, 각 job은 여러 step에 따라 단계를 나눔
 jobs:
   build:
@@ -31,13 +31,14 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '17'
-  
+
       # application.properties를 프로젝트에 포함
       - name: add Application.yml
-        run: mkdir -p ./src/main/resources/; touch ./src/main/resources/application.yml
+        run: |
+          mkdir -p ./src/main/resources/; touch ./src/main/resources/application.yml
         shell: bash
         working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
-      
+
       # github secret으로 등록한 properties 내용 덮어쓰기
       - name: Copy Application.yml
         run: |
@@ -63,22 +64,29 @@ jobs:
         run: zip -r ./$GITHUB_SHA.zip .
         shell: bash
 
+      - name: Debug AWS credentials
+        run: aws configure list
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          AWS_DEFAULT_REGION: ${{ env.AWS_REGION }}
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ${{ env.AWS_REGION }}
-          
+
       # script files 복사
       - name: Copy script
         run: cp ./scripts/*.sh ./deploy
         working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
-      
+
       # S3에 빌드 결과 업로드
       - name: Upload to S3
         run: aws s3 cp --region $AWS_REGION ./$GITHUB_SHA.zip s3://$S3_BUCKET_NAME/$PROJECT_NAME/$GITHUB_SHA.zip
-        
+
       # Deploy 실행
       - name: Deploy
         run: |
