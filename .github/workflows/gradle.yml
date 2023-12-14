@@ -37,10 +37,11 @@ jobs:
         run: mkdir -p ./back/src/main/resources/ touch ./src/main/resources/application.yml
         shell: bash
         working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
-
+  
       # github secret으로 등록한 properties 내용 덮어쓰기
       - name: Copy Application.yml
         run: |
+          mkdir -p ./src/main/resources/
           echo "${{ secrets.APP_YML }}" > ./src/main/resources/application.yml
           cat ./src/main/resources/application.yml  # 디버깅을 위해 파일 내용 출력
         shell: bash
