@@ -73,5 +73,6 @@
   },
   "overrides": {
     "svgo": "3.0.2"
-  }
+  },
+  "homepage": "https://willowy-pie-d50b54.netlify.app/"
 }

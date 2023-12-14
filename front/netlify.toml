@@ -1,0 +1,11 @@
+
+[[redirects]]
+from = "/api/*"
+to = "http://3.36.96.111:8080"
+status = 200
+force = true
+[[redirects]]
+from = "/proxy/*"
+to = "/index.html"
+status = 200
+force = true
