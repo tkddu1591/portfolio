@@ -1,9 +1,3 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
 # workflow의 이름
 name: Deploy
 
@@ -39,13 +33,13 @@ jobs:
           java-version: '17'
 
       # application.properties를 프로젝트에 포함
-      - name: add Application.properties
-        run: touch ./src/main/resources/application.properties
-        shell: bash  
+      - name: add Application.yml
+        run: touch ./src/main/resources/application.yml
+        shell: bash
         working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
         
       # github secret으로 등록한 properties 내용 덮어쓰기
-      - name: copy Application.properties
+      - name: copy Application.yml
         run: echo "${{ secrets.APP_YML }}" > ./src/main/resources/application.yml
         shell: bash
         working-directory: ./back  # back 디렉토리로 이동하여 명령 실행
