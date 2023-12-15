@@ -59,7 +59,8 @@
     "react-dom": ">=16.0.0",
     "react-scripts": "5.0.1",
     "reactstrap": "8.10.0",
-    "sass": "1.62.1"
+    "sass": "1.62.1",
+    "typewriter-effect": "^2.21.0"
   },
   "peerDependencies": {
     "react": ">=16.0.0",
