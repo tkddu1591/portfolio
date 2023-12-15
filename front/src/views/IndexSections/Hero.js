@@ -15,10 +15,10 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react';
 
 // reactstrap components
-import { Button, Container, Row, Col } from "reactstrap";
+import { Button, Container, Row, Col } from 'reactstrap';
 
 class Hero extends React.Component {
   render() {
@@ -40,58 +40,56 @@ class Hero extends React.Component {
               <span className="span-50" />
               <span className="span-100" />
             </div>
-            <Container className="shape-container d-flex align-items-center py-lg">
+            <Container className="shape-container d-flex align-items-center py-lg main">
               <div className="col px-0">
                 <Row className="align-items-center justify-content-center">
-                  <Col className="text-center" lg="6">
-                    <img
-                      alt="..."
-                      className="img-fluid"
-                      src={require("assets/img/brand/argon-react-white.png")}
-                      style={{ width: "200px" }}
-                    />
+                  <Col className="text-center" lg="">
+                    <span className="lead text-white title">김상엽</span>
                     <p className="lead text-white">
-                      A beautiful Design System for Bootstrap 4. It's Free and
-                      Open Source.
+                      안녕하세요
+                      <br />
+                      도전을 즐기는 신입 개발자입니다.
+                      <br />
+                      Skill을 가리지 않고, 문제 발생시 해결하고자 하는 성격이 저의 장점입니다.
                     </p>
                     <div className="btn-wrapper mt-5">
                       <Button
                         className="btn-white btn-icon mb-3 mb-sm-0"
                         color="default"
                         href="https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-landing-page"
-                        size="lg"
-                      >
+                        size="lg">
                         <span className="btn-inner--icon mr-1">
-                          <i className="ni ni-cloud-download-95" />
+                          <i className="fa fa-facebook-square" />
                         </span>
-                        <span className="btn-inner--text">Download React</span>
-                      </Button>{" "}
+                        <span className="btn-inner--text">
+                          <span className="text-indigo mr-1">Like me</span>
+                          on Facebook
+                        </span>
+                      </Button>{' '}
                       <Button
                         className="btn-icon mb-3 mb-sm-0"
                         color="github"
                         href="https://github.com/creativetimofficial/argon-design-system-react"
                         size="lg"
-                        target="_blank"
-                      >
+                        target="_blank">
                         <span className="btn-inner--icon mr-1">
                           <i className="fa fa-github" />
                         </span>
                         <span className="btn-inner--text">
-                          <span className="text-warning mr-1">Star us</span>
+                          <span className="text-warning mr-1">Star me</span>
                           on Github
                         </span>
                       </Button>
                     </div>
                     <div className="mt-5">
-                      <small className="text-white font-weight-bold mb-0 mr-2">
-                        *proudly coded by
-                      </small>
+                      <small className="text-white font-weight-bold mb-0 mr-2">*Provided assistance with code</small>
                       <img
                         alt="..."
                         className="ml-1"
-                        style={{ height: "28px" }}
-                        src={require("assets/img/brand/creativetim-white-slim.png")}
+                        style={{ height: '28px', borderRadius: '10px' }}
+                        src={`${process.env.PUBLIC_URL}/img/main/kkamang.jpg`}
                       />
+                      <span className="text-white font-weight-bold mb-0 ml-1">kkamang</span>
                     </div>
                   </Col>
                 </Row>
@@ -105,12 +103,8 @@ class Hero extends React.Component {
                 version="1.1"
                 viewBox="0 0 2560 100"
                 x="0"
-                y="0"
-              >
-                <polygon
-                  className="fill-white"
-                  points="2560 0 2560 100 0 100"
-                />
+                y="0">
+                <polygon className="fill-white" points="2560 0 2560 100 0 100" />
               </svg>
             </div>
           </section>

@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/argon-design-system-react/issues"
   },
-  "homepage": "https://demos.creative-tim.com/argon-design-system-react/",
+  "homepage": "https://willowy-pie-d50b54.netlify.app/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,7 +35,8 @@
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.css",
-    "minify-sass": "sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --style compressed"
+    "minify-sass": "sass src/assets/scss/argon-design-system-react.scss src/assets/css/argon-design-system-react.min.css --style compressed",
+    "install": " npm install npm install react-bootstrap npm install react-router-dom@6 npm install axios npm i --save-dev prettier npm install -D eslint npm install react-bootstrap-icons --save"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,10 +53,10 @@
     "headroom.js": "0.12.0",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
-    "react": "18.2.0",
+    "react": ">=16.0.0",
+    "react-bootstrap-icons": "^1.10.3",
     "react-datetime": "3.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "6.11.1",
+    "react-dom": ">=16.0.0",
     "react-scripts": "5.0.1",
     "reactstrap": "8.10.0",
     "sass": "1.62.1"
@@ -67,12 +68,19 @@
   "devDependencies": {
     "@types/markerclustererplus": "2.1.33",
     "@types/react": "18.2.6",
+    "axios": "^1.6.2",
+    "eslint": "^8.55.0",
     "eslint-plugin-flowtype": "8.0.3",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
     "jquery": "3.7.0",
+    "npm": "^10.2.5",
+    "prettier": "^3.1.1",
+    "react-bootstrap": "^2.9.1",
+    "react-router-dom": "^6.21.0",
     "typescript": "5.0.4"
   },
   "overrides": {
     "svgo": "3.0.2"
-  },
-  "homepage": "https://willowy-pie-d50b54.netlify.app/"
+  }
 }
