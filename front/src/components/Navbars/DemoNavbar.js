@@ -99,7 +99,7 @@ class DemoNavbar extends React.Component {
                 </NavItem>
                 <NavItem>
                   <NavLink className={'name'}>
-                    Skill
+                    Skills
                   </NavLink>
                 </NavItem>
                 <NavItem>

@@ -18,7 +18,7 @@
 import React from 'react';
 
 // reactstrap components
-import { Container, Row } from 'reactstrap';
+import {Container, Row} from 'reactstrap';
 
 // core components
 import DemoNavbar from './components/Navbars/DemoNavbar.js';
@@ -47,64 +47,68 @@ import Carousel from './views/IndexSections/Carousel.js';
 import Icons from './views/IndexSections/Icons.js';
 import Login from './views/IndexSections/Login.js';
 import Download from './views/IndexSections/Download.js';
-import { Outlet, Route, Routes } from 'react-router-dom';
+import {Outlet, Route, Routes} from 'react-router-dom';
+import Home from "./pages/main/Home";
+import Profile from "./views/examples/Profile";
+import Landing from "./views/examples/Landing";
 
 
 class App extends React.Component {
-  componentDidMount() {
-    document.documentElement.scrollTop = 0;
-    document.scrollingElement.scrollTop = 0;
-    this.refs.main.scrollTop = 0;
-  }
 
-  render() {
-    return (<>
-      <Routes>
-        <Route path='/' element={<>
-          <DemoNavbar />
-          <main ref='main'>
-            <Outlet></Outlet>
-          </main>
-          <CardsFooter />
-        </>}>
-          <Route path={'/'} element={<>
-            <Hero />
-            <Buttons />
-            <Inputs />
-            <section className='section'>
-              <Container>
-                <CustomControls />
-                <Menus />
-              </Container>
-            </section>
-            <Navbars />
-            <section className='section section-components'>
-              <Container>
-                <Tabs />
-                <Row className='row-grid justify-content-between align-items-center mt-lg'>
-                  <Progress />
-                  <Pagination />
-                </Row>
-                <Row className='row-grid justify-content-between'>
-                  <Pills />
-                  <Labels />
-                </Row>
-                <Alerts />
-                <Typography />
-                <Modals />
-                <Datepicker />
-                <TooltipPopover />
-              </Container>
-            </section>
-            <Carousel />
-            <Icons />
-            <Login />
-            <Download />
-          </>} />
-        </Route>
-      </Routes>
-    </>);
-  }
+    render() {
+        return (<>
+            <Routes>
+                <Route path='/' element={<>
+                    <DemoNavbar/>
+                    <main ref='main'>
+                        <Outlet></Outlet>
+                    </main>
+                    <CardsFooter/>
+                </>}>
+                    <Route path={'/'} element={<>
+                        <Home/>
+                    </>}/>
+                    <Route path={'/new'} element={<>
+                        <Buttons/>
+                        <Inputs/>
+                        <section className='section'>
+                            <Container>
+                                <CustomControls/>
+                                <Menus/>
+                            </Container>
+                        </section>
+                        <Navbars/>
+                        <section className='section section-components'>
+                            <Container>
+                                <Tabs/>
+                                <Row className='row-grid justify-content-between align-items-center mt-lg'>
+                                    <Progress/>
+                                    <Pagination/>
+                                </Row>
+                                <Row className='row-grid justify-content-between'>
+                                    <Pills/>
+                                    <Labels/>
+                                </Row>
+                                <Alerts/>
+                                <Typography/>
+                                <Modals/>
+                                <Datepicker/>
+                                <TooltipPopover/>
+                            </Container>
+                        </section>
+                        <Carousel/>
+                        <Icons/>
+                        <Login/>
+                        <Download/>
+                    </>}/>
+                </Route>
+                <Route path='/login' element={<Login/>}/>
+                <Route path='/download' element={<Download/>}/>
+                <Route path='/profile-page' element={<Profile/>}/>
+                <Route path='/landing-page' element={<Landing/>}/>
+            </Routes>
+        </>);
+    }
 }
 
 export default App;

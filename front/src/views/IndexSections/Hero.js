@@ -24,11 +24,11 @@ import TypewriterComponent from 'typewriter-effect';
 function Hero() {
   return (
     <>
-      <div className="position-relative">
+      <div className="position-relative main">
         {/* Hero for FREE version */}
-        <section className="section section-hero section-shaped">
+        <section className="section section-hero section-shaped" style={{paddingBottom:0}}>
           {/* Background circles */}
-          <div className="shape shape-style-1 shape-default">
+          <div className="shape shape-style-1 shape-default" >
             <span className="span-150" />
             <span className="span-50" />
             <span className="span-50" />
@@ -40,10 +40,10 @@ function Hero() {
             <span className="span-50" />
             <span className="span-100" />
           </div>
-          <Container className="shape-container d-flex align-items-center py-lg main">
+          <Container className="shape-container d-flex align-items-center py-lg ">
             <div className="col px-0">
               <Row className="align-items-center justify-content-center">
-                <Col className="text-center" lg="">
+                <Col className="text-center height" lg="">
                   <span className="lead text-white title">김상엽</span>
 
                   <p className="lead text-white">
@@ -51,7 +51,7 @@ function Hero() {
                     <TypewriterComponent
                       options={{
                         strings: [
-                          '도전을 즐기는 신입 개발자입니다.',
+                          '도전을 즐기는 주니어 개발자입니다.',
                           'Skill을 가리지 않고, 문제 발생시 해결하고자 하는 성격이 저의 장점입니다.',
                         ],
                         autoStart: true,
@@ -63,7 +63,7 @@ function Hero() {
                   </p>
                   <div className="btn-wrapper mt-5">
                     <Button
-                      className="btn-white btn-icon mb-3 mb-sm-0"
+                      className="btn-white btn-icon mb-3 mb-sm-0 btn"
                       color="default"
                       href="https://www.facebook.com/kimsangyup"
                       size="lg"
