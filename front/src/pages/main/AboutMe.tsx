@@ -47,14 +47,14 @@ function AboutMe() {
   return (
     <section>
       <Container className={'aboutMe'}>
-        <h1>About Me</h1>
         <Row>
+          <Col lg={12}>
+            <h1>About Me</h1>
+          </Col>
           <Col className={'table'} lg={4} md={6}>
-            <div
-              className={'my_profile'}
-              style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL}/img/main/my_profile.jpg)`,
-              }}></div>
+            <div className={'my_profile'}>
+              <img src={`${process.env.PUBLIC_URL}/img/main/my_profile.jpg`} alt={'my_profile'} />
+            </div>
           </Col>
           <Col lg={8} md={6} className={'table'}>
             <Row className={'aboutBox'}>

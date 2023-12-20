@@ -38,12 +38,16 @@ h1 {
 
   .my_profile {
     border-radius: 10px;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
     background-size: cover;
     overflow: hidden;
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    img {
+      width: 100%;
+    }
   }
 
   .aboutBox {
@@ -146,4 +150,49 @@ h1 {
   background: linear-gradient(35deg, #fb6340 0, #fbb140 100%) !important;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+
+  .img {
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+  .content {
+
+    table {
+      width: 100%;
+      td:first-child {
+        font-weight: bolder;
+        width: 30%;
+      }
+      td:nth-child(2) {
+        width: 70%;
+      }
+    }
+
+    p {
+      font-size: 30px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      font-weight: bold;
+      font-family: Rubik Scribble;
+    }
+
+    :nth-child(2) {
+      margin-bottom: 20px;
+
+      span {
+        font-size: 15px;
+        color: gray;
+      }
+    }
+    :nth-child(3){
+      margin-bottom: 20px;
+    }
+    :nth-child(4){
+      margin-bottom: 20px;
+    }
+  }
+
 }
