@@ -222,11 +222,44 @@ h1 {
     margin: 0;
   }
 }
-.modal{
-  .youtube-player{
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+
+.modal {
+  .youtube-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-  .youtube-div{
-    position: relative; width: 100%; heigth: auto; padding-top: 50%; margin-bottom: 20px;
+
+  .youtube-div {
+    position: relative;
+    width: 100%;
+    heigth: auto;
+    padding-top: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+.history {
+  .profile {
+    border-radius: 50px;
+  }
+
+  .icon {
+
+
+    :nth-child(1) {
+      color: #0865FDFF;
+      margin-right: 30px;
+      font-size: 40px;
+      cursor: pointer;
+    }
+    :nth-child(2) {
+      color: black;
+      margin-right: 30px;
+      font-size: 40px;
+      cursor: pointer;
+    }
   }
 }

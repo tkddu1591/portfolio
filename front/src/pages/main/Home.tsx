@@ -11,8 +11,93 @@ function Home() {
       <AboutMe></AboutMe>
       <Skills></Skills>
       <Project></Project>
+      <History></History>
+
     </>
   );
+}
+function History(){
+  return( <main className="profile-page ">
+    <section className="section">
+      <Container className={'history'}>
+        <h1 style={{ color: 'black' }}>History</h1>
+        <Card className="card-profile mt-n1">
+          <div className="px-4">
+            <Row className="justify-content-center">
+              <Col className="order-lg-2" lg="3">
+                <div className="card-profile-image">
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <img
+                        src={process.env.PUBLIC_URL + '/img/main/history/profile.jpg'}
+                        alt={'profile'}
+                        className={'profile'}
+                        style={{ borderRadius: '30px' }}
+                    />
+                  </a>
+                </div>
+              </Col>
+              <Col className="order-lg-3 text-lg-center align-self-lg-center icon" lg="4">
+                <i className="fa fa-facebook-square" />
+                <i className="fa fa-github" />
+              </Col>
+              <Col className="order-lg-1" lg="4">
+                <div className="card-profile-stats d-flex justify-content-center">
+                  <div>
+                    <span className="heading">2023.06~</span>
+                    <span className="description">started</span>
+                  </div>
+                  <div>
+                    <span className="heading">3</span>
+                    <span className="description">projects</span>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <div className="text-center mt-6">
+              <h3>
+                김상엽 <span className="font-weight-light"></span>
+              </h3>
+            </div>
+            <div className="mt-4 py-4 border-top text-center">
+              <Row className="justify-content-center">
+                <Col lg={"3"}>
+                  <p>2017.03 ~</p>
+                  <p>2024.02</p>
+                </Col>
+                <Col lg="9" className={'text-left'}>
+                  <p>
+                   내용
+                  </p>
+                </Col>
+              </Row>
+            </div>  <div className="mt-4 py-4 border-top text-center">
+              <Row className="justify-content-center">
+                <Col lg={"3"}>
+                  <p>2017.03 ~</p>
+                </Col>
+                <Col lg="9" className={'text-left'}>
+                  <p>
+                   내용
+                  </p>
+                </Col>
+              </Row>
+            </div>  <div className="mt-4 py-4 border-top text-center">
+              <Row className="justify-content-center">
+                <Col lg={"3"}>
+                  <p>2017.03 ~</p>
+                </Col>
+                <Col lg="9" className={'text-left'}>
+                  <p>
+                   내용
+                  </p>
+                </Col>
+              </Row>
+            </div>
+          </div>
+        </Card>
+      </Container>
+    </section>
+  </main>)
 }
 
 function Project() {
@@ -20,7 +105,7 @@ function Project() {
   const [projectList, setProjectList] = useState([
     {
       imgLink: '/img/main/project/portfolio.png',
-      title: 'portfolio',
+      title: 'Portfolio',
       date: '2023.12',
       content:
         '<span>\n' +
@@ -39,7 +124,8 @@ function Project() {
         { title: '프로젝트 발표영상', link: 'https://www.youtube.com/embed/nSfG5phb78w?si=5dYN_WK_B4Q2VhKU' },
       ],
       githubLink: 'https://github.com/tkddu1591/HelloWorld',
-    },{
+    },
+    {
       imgLink: '/img/main/project/HelloWorld.png',
       title: 'Hello World',
       date: '2023.11',
@@ -61,7 +147,8 @@ function Project() {
         { title: '프로젝트 발표영상', link: 'https://www.youtube.com/embed/nSfG5phb78w?si=5dYN_WK_B4Q2VhKU' },
       ],
       githubLink: 'https://github.com/tkddu1591/HelloWorld',
-    },{
+    },
+    {
       imgLink: '/img/main/project/LotteOn.png',
       title: 'Lotte On',
       date: '2023.10',
@@ -77,9 +164,7 @@ function Project() {
         { title: 'Front', content: 'React, javascript' },
         { title: '담당파트', content: '로그인, product, myPage' },
       ],
-      videos: [
-        { title: '프로젝트 시연영상', link: 'https://www.youtube.com/embed/RQU2VGVtf_8?si=tpT_HGgCb_6yS-tz' },
-      ],
+      videos: [{ title: '프로젝트 시연영상', link: 'https://www.youtube.com/embed/RQU2VGVtf_8?si=tpT_HGgCb_6yS-tz' }],
       githubLink: 'https://github.com/tkddu1591/LotteShop2',
     },
   ]);
@@ -167,7 +252,6 @@ function ProjectModal({ title, modal, setModal, videos }) {
             </div>
           </>
         ))}
-
       </div>
     </Modal>
   );
