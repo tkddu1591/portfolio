@@ -1,52 +1,33 @@
-import React, { useState } from 'react';
+import React, { LegacyRef, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'reactstrap';
+import { apiClient } from '../../App';
 
 function AboutMe() {
   const md = 12;
   const lg = 6;
-  const [itemList, setItemList] = useState([
+  const [itemList, setItemList] = useState<
     {
-      iTag: 'bi bi-person-fill',
-      title: '이름',
-      content: '김상엽',
-      isATag: false,
-    },
-    {
-      iTag: 'bi bi-calendar2-event-fill',
-      title: '생년월일',
-      content: '1998.10.21',
-      isATag: false,
-    },
-    {
-      iTag: 'bi bi-geo-alt-fill',
-      title: '주소지',
-      content: '부산광역시 남구',
-      isATag: false,
-    },
-    {
-      iTag: 'bi bi-telephone-fill',
-      title: '연락처',
-      content: '010-3013-9397',
-      isATag: true,
-      aTagHref: 'tel:010-3013-9397',
-    },
-    {
-      iTag: 'bi bi-envelope-fill',
-      title: '이메일',
-      content: 'tkddu1591@gmail.com',
-      isATag: true,
-      aTagHref: 'mailto:tkddu1591@gmail.com',
-    },
-    {
-      iTag: 'bi bi-pencil-fill',
-      title: '학력',
-      content: '경성대학교(메카트로닉스공학부)',
-      isATag: false,
-    },
-  ]);
+      itag: string;
+      title: string;
+      content: string;
+      isATag: boolean;
+      atagHref:string;
+    }[]
+  >();
+  useEffect(() => {
+    apiClient
+      .get('/aboutMe')
+      .then(res => {
+        setItemList(res.data);
+        console.log(res.data)
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
   return (
     <section>
-      <Container className={'aboutMe'}>
+      <Container className={'aboutMe'} id={'aboutMe'}>
         <Row>
           <Col lg={12}>
             <h1>About Me</h1>
@@ -58,7 +39,7 @@ function AboutMe() {
           </Col>
           <Col lg={8} md={6} className={'table'}>
             <Row className={'aboutBox'}>
-              {itemList.map((item, index) => (
+              {Array.isArray(itemList)&&itemList.map((item, index) => (
                 <AboutMeItem key={item.title} item={item}></AboutMeItem>
               ))}
             </Row>
@@ -77,7 +58,7 @@ function AboutMeItem({ item }) {
   return (
     <Col className={'item'} lg={lg} md={md}>
       <div className={'icon'}>
-        <i className={item.iTag}></i>
+        <i className={item.itag}></i>
       </div>
       <div className={'title'}>
         <p>{item.title}</p>
@@ -92,7 +73,7 @@ function AboutMeItem({ item }) {
             onMouseEnter={() => {
               setAColor('slateblue');
             }}
-            href={item.aTagHref}>
+            href={item.atagHref}>
             {item.content}
           </a>
         )}

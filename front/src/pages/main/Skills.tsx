@@ -1,9 +1,10 @@
-import { Card, CardBody, Col, Container, Row } from 'reactstrap';
-import React from 'react';
+import {Button, Card, CardBody, Col, Container, Row} from 'reactstrap';
+import React, {useRef} from 'react';
 
 function Skills() {
+
   return (
-    <section className="section section-lg pt-lg-0 skills">
+    <section className="section section-lg pt-lg-0 skills" id={'skills'}>
       <Container>
         <br />
         <h1>Skills</h1>

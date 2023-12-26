@@ -27,7 +27,6 @@ import './scss/index.scss';
 import './scss/nav.scss';
 import './scss/main.scss';
 // index page sections
-import Hero from './views/IndexSections/Hero.js';
 import Buttons from './views/IndexSections/Buttons.js';
 import Inputs from './views/IndexSections/Inputs.js';
 import CustomControls from './views/IndexSections/CustomControls.js';
@@ -52,7 +51,14 @@ import Home from "./pages/main/Home";
 import Profile from "./views/examples/Profile";
 import Landing from "./views/examples/Landing";
 import SimpleFooter from "./components/Footers/SimpleFooter";
+import axios from "axios";
+const host = window.location.hostname === "localhost"
+    ? 'http://localhost:8080'
+    : "/api";
 
+export const apiClient = axios.create({
+    baseURL: host,
+});
 
 class App extends React.Component {
 

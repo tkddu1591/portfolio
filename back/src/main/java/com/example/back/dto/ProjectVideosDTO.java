@@ -9,11 +9,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class AboutMeDTO {
-    private int no;
+public class ProjectVideosDTO {
+    private int projectVideosNo;
+    private int projectNo;
     private String title;
-    private String iTag;
-    private String content;
-    private Boolean isATag;
-    private String aTagHref;
+    private String link;
 }

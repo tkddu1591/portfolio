@@ -6,19 +6,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity
-@Table(name = "about_me")
+@Data
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Data
-public class AboutMeEntity {
+@Entity
+@Table(name = "project_skills")
+public class ProjectSkillsTableEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int no;
+    private int projectSkillNo;
+    @ManyToOne
+    @JoinColumn(name = "projectNo")
+    private ProjectEntity project;
     private String title;
-    private String iTag;
     private String content;
-    private Boolean isATag;
-    private String aTagHref;
 }
