@@ -90,7 +90,7 @@ function Hero() {
                         on Github
                       </span>
                     </Button>
-                  </div>
+                  </div>{/*
                   <div className="mt-5">
                     <small className="text-white font-weight-bold mb-0 mr-2">*Provided assistance with code</small>
                     <img
@@ -100,7 +100,7 @@ function Hero() {
                       src={`${process.env.PUBLIC_URL}/img/main/kkamang.jpg`}
                     />
                     <span className="text-white font-weight-bold mb-0 ml-1">kkamang</span>
-                  </div>
+                  </div>*/}
                 </Col>
               </Row>
             </div>

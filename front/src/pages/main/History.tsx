@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Button, Card, Col, Container, Row} from 'reactstrap';
 import {apiClient, host} from '../../App';
-import axios from "axios";
 
 function History() {
   const [historyList, setHistoryList] = useState<
