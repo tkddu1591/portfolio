@@ -51,6 +51,7 @@ import {Outlet, Route, Routes} from 'react-router-dom';
 import Home from "./pages/main/Home";
 import Profile from "./views/examples/Profile";
 import Landing from "./views/examples/Landing";
+import SimpleFooter from "./components/Footers/SimpleFooter";
 
 
 class App extends React.Component {
@@ -63,7 +64,7 @@ class App extends React.Component {
                     <main ref='main'>
                         <Outlet></Outlet>
                     </main>
-                    <CardsFooter/>
+                    <SimpleFooter/>
                 </>}>
                     <Route path={'/'} element={<>
                         <Home/>

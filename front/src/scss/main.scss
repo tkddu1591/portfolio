@@ -242,24 +242,43 @@ h1 {
 }
 
 .history {
-  .profile {
-    border-radius: 50px;
-  }
 
-  .icon {
+  .icons {
 
 
     :nth-child(1) {
       color: #0865FDFF;
-      margin-right: 30px;
-      font-size: 40px;
+      font-size: 50px;
       cursor: pointer;
     }
     :nth-child(2) {
       color: black;
-      margin-right: 30px;
-      font-size: 40px;
+      font-size: 50px;
       cursor: pointer;
+    }
+  }
+  .content{
+    .contentBox{
+      display: flex;
+      align-content: center;
+      div:nth-child(1){
+        span:nth-child(1){
+          font-size: 20px;
+        }
+        width: 200px;
+        justify-content: center;
+        align-content: center;
+        p{
+          margin:0;
+        }
+      }
+      div:nth-child(2){
+        width: calc(100% - 200px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-content: center;
+      }
     }
   }
 }
