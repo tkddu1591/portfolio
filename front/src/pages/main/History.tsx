@@ -53,7 +53,7 @@ function History() {
                     <Button
                         className={'float-right  mt-3'}
                         color="default"
-                        onClick={()=>{window.open(`${host}/csv_download?fileName=김상엽 입사지원서.docx`,"_blank")}}
+                        onClick={()=>{window.open(`${host}/csv_download?fileName=김상엽 입사지원서.pdf`,"_blank")}}
                     >
                       자기소개서
                     </Button>
