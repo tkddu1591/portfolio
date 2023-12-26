@@ -61,7 +61,7 @@ function History() {
                   </div>
                 </Col>
                 <Col className="order-lg-1" lg="4">
-                  <div className="card-profile-stats d-flex justify-content-center">
+                  <div className="card-profile-stats d-flex justify-content-center mt-lg-3">
                     <div>
                       <span className="heading">2023.06~</span>
                       <span className="description">started</span>
