@@ -95,7 +95,7 @@ function Project() {
                         <i
                           className="bi bi-github github"
                           onClick={() => {
-                            window.open('https://github.com/tkddu1591/HelloWorld');
+                            window.open(project.githubLink);
                           }}>
                           {' '}
                         </i>
