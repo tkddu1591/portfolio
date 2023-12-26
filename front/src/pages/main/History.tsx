@@ -22,7 +22,7 @@ function History() {
       <section className="section" id={'history'}>
         <Container className={'history'}>
           <h1 style={{ color: 'black', marginBottom: '60px' }}>History</h1>
-          <Card className="card-profile mt-n1">
+          <Card className="card-profile mt-n-3">
             <div className="px-4">
               <Row className="justify-content-center">
                 <Col className="order-lg-2" lg="3">
@@ -35,7 +35,7 @@ function History() {
                     />
                   </div>
                 </Col>
-                <Col className="order-lg-3 text-lg-right align-self-lg-center icons" lg="4">
+                <Col className="order-lg-3 text-lg-right align-self-lg-center mt-4 icons" lg="4">
                   <div className="card-profile-actions mt-lg-0 " style={{ cursor: 'default' }}>
 
                     <i
@@ -73,7 +73,7 @@ function History() {
                   </div>
                 </Col>
               </Row>
-              <div className="text-center mt-6">
+              <div className="text-center mt-lg-6">
                 <h3>
                   김상엽 <span className="font-weight-light"></span>
                 </h3>
