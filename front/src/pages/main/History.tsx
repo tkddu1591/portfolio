@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Col, Container, Row } from 'reactstrap';
-import { apiClient } from '../../App';
+import {Button, Card, Col, Container, Row} from 'reactstrap';
+import {apiClient, host} from '../../App';
+import axios from "axios";
 
 function History() {
   const [historyList, setHistoryList] = useState<
@@ -36,6 +37,7 @@ function History() {
                 </Col>
                 <Col className="order-lg-3 text-lg-right align-self-lg-center icons" lg="4">
                   <div className="card-profile-actions mt-lg-0 " style={{ cursor: 'default' }}>
+
                     <i
                       className="fa fa-facebook-square mr-4"
                       onClick={() => {
@@ -43,11 +45,19 @@ function History() {
                       }}
                     />
                     <i
-                      className="fa fa-github float-right mt-2"
+                      className="fa fa-github mr-4"
                       onClick={() => {
                         window.open('https://github.com/tkddu1591', '_blank');
                       }}
                     />
+
+                    <Button
+                        className={'float-right  mt-3'}
+                        color="default"
+                        onClick={()=>{window.open(`${host}/csv_download?fileName=김상엽 입사지원서.docx`,"_blank")}}
+                    >
+                      자기소개서
+                    </Button>
                   </div>
                 </Col>
                 <Col className="order-lg-1" lg="4">

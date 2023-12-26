@@ -52,7 +52,7 @@ import Profile from "./views/examples/Profile";
 import Landing from "./views/examples/Landing";
 import SimpleFooter from "./components/Footers/SimpleFooter";
 import axios from "axios";
-const host = window.location.hostname === "localhost"
+export const host = window.location.hostname === "localhost"
     ? 'http://localhost:8080'
     : "/api";
 
